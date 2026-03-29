@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "AI Overview Stamper",
+  "version": "1.0",
+  "description": "Stamps Google AI Overviews with the truth.",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*", "*://google.com/*"],
+      "js": ["content.js"],
+      "css": ["stamp.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
